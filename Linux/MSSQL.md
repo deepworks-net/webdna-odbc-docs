@@ -97,7 +97,7 @@ DSN Keywords and format are based on the driver. For MSSQL, refer to the [Micros
 ## 4. Test your connection
 Assuming everything is set correctly, you should be able to use WebDNA to connect to MSSQL. To test it, use the SQL context like so:
 ```WEBDNA
-[SQL dsn=MSSQL&username=myuser&password=myusers_password&statement=SELECT sku,firstname,lastname FROM myusers WHERE status = '1' ORDER BY lastname,firstname;]
+[SQL dsn=MSSQL&username=myuser&password=myusers_password&statement=SELECT firstname,lastname FROM myusers WHERE status = 'active' ORDER BY lastname,firstname;]
 	Found '[numfound]' Active Users!
 	[Founditems]
 			User [index]: [lastname], [firstname]
@@ -106,3 +106,4 @@ Assuming everything is set correctly, you should be able to use WebDNA to connec
 ```
 
 ## 5. Troubleshooting Tips
+Coming Soon!
