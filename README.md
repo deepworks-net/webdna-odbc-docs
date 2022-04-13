@@ -7,7 +7,6 @@ For more technical information on ODBC, please consult the official [Microsoft D
 
 ## Guides
 Select the DBMS and OS you wish to configure ODBC for:
-- Linux - General Configuration
+- Linux    
+    - [Initial Setup](Linux/README.md) (UnixODBC Driver Manager)
     - [Microsoft SQL Server (MSSQL)](Linux/MSSQL.md)
-    - MySQL - Coming Soon!
-    - Postgre SQL - Coming Soon!

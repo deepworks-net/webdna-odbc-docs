@@ -4,7 +4,7 @@
 Pre-requisites:
 1. Make sure Apache and WebDNA are installed and working properly.
 1. Ensure External DBMS is configured correctly (with user) 
-1. Install the proper driver manager (depends on OS Flavor)
+1. [Install the proper driver manager](README.md) (depends on OS Flavor)
 
 General Steps:
 1. Install the proper driver (depends on OS Flavor and DBMS) 
