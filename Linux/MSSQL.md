@@ -4,7 +4,7 @@
 Pre-requisites:
 1. Make sure Apache and WebDNA are installed and working properly.
 1. Ensure External DBMS is configured correctly (with user) 
-1. [Install the proper driver manager](README.md) (depends on OS Flavor)
+1. Install the [driver manager](README.md) (depends on OS Flavor)
 
 General Steps:
 1. Install the proper driver (depends on OS Flavor and DBMS) 
@@ -12,13 +12,13 @@ General Steps:
 1. Add DSN to odbc.ini (depends on installed driver)
 1. Test Connection
 
-## 1. Install the Proper Driver
+## 1. Install the Proper Driver for MSSQL
 Based on the [official documentation](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15#17) from Microsoft - currently tested against Microsoft ODBC 17
 
 NOTE: You must run these commands as a user with sudo (admin) access to the unix environment!
 
 ### CentOS/Redhat (x64) 7.9.2009:
-Install msodbc driver from Microsoft:
+Install the msodbc driver from Microsoft:
 ```SHELL
 # Install repository in order to get updates via the package manager
 sudo su
@@ -28,14 +28,14 @@ curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/m
 exit
 
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-# Install the odbc driver sql tools
+# Install the odbc driver
 sudo ACCEPT_EULA=Y yum install -y msodbcsql17
 # Optional mssql-tools (for troubleshooting)
 sudo ACCEPT_EULA=Y yum install -y mssql-tools
 ```
 
 ### CentOS/Redhat (x64) 8.4.2105:
-Install msodbc driver from Microsoft:
+Install the msodbc driver from Microsoft:
 ```SHELL
 # Install repository in order to get updates via the package manager
 sudo su
@@ -45,7 +45,7 @@ curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/m
 exit
 
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-# Install the odbc driver sql tools
+# Install the odbc driver
 sudo ACCEPT_EULA=Y yum install -y msodbcsql17
 # Optional mssql-tools (for troubleshooting)
 sudo ACCEPT_EULA=Y yum install -y mssql-tools
@@ -69,7 +69,7 @@ sudo sed -i.bak -e "s/SQLLibraryPath.*/SQLLibraryPath	\/usr\/lib64\/libodbc.so/g
 ```
 <b>OR</b>
 
-manually add value '/usr/lib64/libodbc.so' the SQLLibraryPath preference in your webdna preferences like so (with a tab inbetween!):
+manually add the value '/usr/lib64/libodbc.so' the SQLLibraryPath preference in your webdna preferences like so (with a tab inbetween!):
 ```FILE
 SQLLibraryPath	/usr/lib64/libodbc.so
 ```

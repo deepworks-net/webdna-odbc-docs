@@ -25,5 +25,5 @@ sudo dnf -y install unixODBC
 ```
 ```SHELL
 # Ubuntu 16.04, 18.04, 20.04, 21.10, 22.04
-sudo apt-get -y install unixODBC
+sudo apt-get -y install unixodbc-bin
 ```

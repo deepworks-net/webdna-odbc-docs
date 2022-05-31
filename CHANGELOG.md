@@ -1,6 +1,6 @@
 # WebDNA Configuration Guides Changelog
 
-## (04/13/2022) v0.2.0-beta:
+## (04/14/2022) v0.2.0-beta:
 - Added documentation for installing UnixODBC on CentOS 7, CentOS 8, RockyLinux 8.5, Alpine 3.12 and Ubuntu 16.04-22.04
 - Added documentation for installing for MSSQL ODBC Driver on Ubuntu 16.04
 - Updated Readme
